@@ -348,8 +348,18 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 function assendingArray(arr){
-  let 
+  let comparisonValue = arr[0]
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false
+    } else {
+      comparisonValue = arr[i]
+    }
+  }
+  return true
 }
+
+let arrayIsAscending = assendingArray(simpleArray)
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -373,13 +383,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["duck, rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["duck, realDuck"]
